@@ -4,17 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test npx jest -i",
+    "build": "NODE_ENV=production npx tsc --outDir dist",
+    "start": "NODE_ENV=production NODE_TLS_REJECT_UNAUTHORIZED=0 node dist/server.js",
+    "dev": "NODE_ENV=development npx nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node src/server.ts\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
