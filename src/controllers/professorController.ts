@@ -10,6 +10,6 @@ async function getTeachers(req: Request, res: Response){
     }
 }
 
-export{
+export{ 
     getTeachers,
-}
+} 
