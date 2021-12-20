@@ -20,5 +20,5 @@ async function getProvas(req: Request, res: Response){
 }
 export{
     postProva,
-    getProvas,
-}
+    getProvas, 
+} 
