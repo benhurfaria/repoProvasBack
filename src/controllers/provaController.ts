@@ -10,6 +10,15 @@ async function postProva(req: Request, res: Response){
     }
 }
 
+async function getProvas(req: Request, res: Response){
+    try{
+        const resposta = await provaService.getProvas();
+        return res.send(resposta);
+    } catch(error){
+        res.sendStatus(500);
+    }
+}
 export{
     postProva,
+    getProvas,
 }
