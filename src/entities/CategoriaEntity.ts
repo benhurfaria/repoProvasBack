@@ -1,10 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity('disciplina')
-export default class CursoEntity {
+@Entity('categoria')
+export default class CategoriaEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  nome: string;
+  name: string;
 }
